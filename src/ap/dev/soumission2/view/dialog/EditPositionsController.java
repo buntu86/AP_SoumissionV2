@@ -5,6 +5,9 @@ import ap.dev.soumission2.model.M_Cahier;
 import ap.dev.soumission2.model.M_Position;
 import ap.dev.soumission2.tools.Log;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -14,7 +17,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 
 public class EditPositionsController implements Initializable {
     
@@ -29,43 +34,67 @@ public class EditPositionsController implements Initializable {
     @FXML
     private ChoiceBox<M_Cahier> choicebox;
     
+    @FXML
+    private VBox vbox;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        choicebox.setItems(MainApp.getCan().getListCahiers());
-        choicebox.getSelectionModel()
-                .selectedItemProperty()
-                .addListener( (ObservableValue<? extends M_Cahier> observable, M_Cahier oldValue, M_Cahier newValue) -> updateChoiceBox(newValue) );
+    
+    List<M_Cahier> cahiers = MainApp.getCan().getListCahiers();
+       choicebox.getItems().addAll(cahiers);
+       choicebox.setConverter( new CahierToStringConverter());
+       choicebox.getSelectionModel()
+               .selectedItemProperty()
+               .addListener( (ObservableValue<? extends M_Cahier> observable, M_Cahier oldValue, M_Cahier newValue) -> updateTable(newValue) );
+
+        vbox.setDisable(true);
     }    
     
-    public void updateChoiceBox(M_Cahier cahier){
-        
+    public void updateTable(M_Cahier cahier){
         //cahier.getListPositions().add(new M_Position(0, true, 0, 0, "desc", "unite"));
-        
+        MainApp.getCan().save();
+
         table.setItems(cahier.getListPositions());
         num.setCellValueFactory(cellData -> cellData.getValue().numPositionProperty().asObject());            
-        
-     
+        vbox.setDisable(false);
     }
     
     public void setStage(Stage editArticlesStage) {
         this.stage = editArticlesStage;
 
         //ESC touch listener
-        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
-            if (KeyCode.ESCAPE == event.getCode()) {
-                stage.close();
-            }
-        });
-        choicebox.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> {
-            if (KeyCode.ESCAPE == event.getCode()) {
-                stage.close();
-            }
-        });
+        stage.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> closeIfEscape(event));
+        choicebox.addEventHandler(KeyEvent.KEY_RELEASED, (KeyEvent event) -> closeIfEscape(event));
+        
     }  
+    
+    private void closeIfEscape(KeyEvent event){
+       if (KeyCode.ESCAPE == event.getCode()) {
+           stage.close();
+       }
+   }
     
     @FXML
     public void close(){
         this.stage.close();
-    }       
-    
+    }   
+
 }
+
+class CahierToStringConverter extends StringConverter<M_Cahier> {
+
+   private Map<String, M_Cahier> cahierMap = new HashMap<>();
+
+   @Override
+   public String toString(M_Cahier product) {
+       cahierMap.put(product.getTitre(), product);
+       return product.getTitre();
+   }
+
+   @Override
+   public M_Cahier fromString(String name) {
+       return cahierMap.get(name);
+   }
+}
+
+

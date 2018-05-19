@@ -3,18 +3,81 @@
     <Cahiers>
         <annee>15</annee>
         <id>0</id>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
         <num>111</num>
         <titre>Régies</titre>
     </Cahiers>
     <Cahiers>
         <annee>0</annee>
         <id>0</id>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
         <num>112</num>
         <titre>Essais</titre>
     </Cahiers>
     <Cahiers>
         <annee>14</annee>
         <id>0</id>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
         <num>113</num>
         <titre>Installation de chantier</titre>
     </Cahiers>
