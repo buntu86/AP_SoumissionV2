@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CAN>
+    <Cahiers>
+        <annee>15</annee>
+        <id>0</id>
+        <num>111</num>
+        <titre>Régies</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>0</annee>
+        <id>0</id>
+        <num>112</num>
+        <titre>Essais</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>14</annee>
+        <id>0</id>
+        <num>113</num>
+        <titre>Installation de chantier</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>11</annee>
+        <id>0</id>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <num>116</num>
+        <titre>Coupes de bois et défrichement</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>12</annee>
+        <id>0</id>
+        <num>117</num>
+        <titre>Démolitions et démontages</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>11</annee>
+        <id>0</id>
+        <num>132</num>
+        <titre>Carottages et sciages dans le béton et la maçonnerie</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>14</annee>
+        <id>0</id>
+        <num>151</num>
+        <titre>Constructions de réseaux enterrés</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>11</annee>
+        <id>0</id>
+        <num>211</num>
+        <titre>Fouilles et terrassements</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>10</annee>
+        <id>0</id>
+        <num>222</num>
+        <titre>Pavages et bordures</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>10</annee>
+        <id>0</id>
+        <num>223</num>
+        <titre>Chaussées et revêtements</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>12</annee>
+        <id>0</id>
+        <num>237</num>
+        <titre>Canalisations et évacuations des eaux</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>12</annee>
+        <id>0</id>
+        <num>241</num>
+        <titre>Constructions en béton coulé sur place</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>13</annee>
+        <id>0</id>
+        <listPositions>
+            <description>desc</description>
+            <numPosition>0</numPosition>
+            <positionR>true</positionR>
+            <unite>unite</unite>
+            <variante>0</variante>
+        </listPositions>
+        <num>314</num>
+        <titre>Maçonnerie</titre>
+    </Cahiers>
+    <Cahiers>
+        <annee>0</annee>
+        <id>0</id>
+        <num>315</num>
+        <titre>Construction préfabriquée en béton et en maçonnerie</titre>
+    </Cahiers>
+</CAN>
