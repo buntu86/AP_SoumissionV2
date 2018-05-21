@@ -1,13 +1,11 @@
 package ap.dev.soumission2.view.dialog;
 
 import ap.dev.soumission2.MainApp;
+import ap.dev.soumission2.data.CahierToStringConverter;
 import ap.dev.soumission2.model.M_Cahier;
 import ap.dev.soumission2.model.M_Position;
-import ap.dev.soumission2.tools.Log;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -19,7 +17,6 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.util.StringConverter;
 
 public class EditPositionsController implements Initializable {
     
@@ -80,21 +77,3 @@ public class EditPositionsController implements Initializable {
     }   
 
 }
-
-class CahierToStringConverter extends StringConverter<M_Cahier> {
-
-   private Map<String, M_Cahier> cahierMap = new HashMap<>();
-
-   @Override
-   public String toString(M_Cahier product) {
-       cahierMap.put(product.getTitre(), product);
-       return product.getTitre();
-   }
-
-   @Override
-   public M_Cahier fromString(String name) {
-       return cahierMap.get(name);
-   }
-}
-
-

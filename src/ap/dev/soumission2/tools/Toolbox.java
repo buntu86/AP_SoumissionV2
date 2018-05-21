@@ -16,4 +16,8 @@ public class Toolbox {
             return 0;
         }
     }
+   
+   public static String getString(int i){
+       return String.valueOf(i);
+   }
 }
