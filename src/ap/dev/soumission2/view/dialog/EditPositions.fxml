@@ -77,7 +77,7 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="btn_ajouter" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" prefWidth="60.0" text="Ajouter">
+                        <Button fx:id="btn_ajouter" maxWidth="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#add" prefWidth="60.0" text="Ajouter">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>

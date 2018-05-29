@@ -20,4 +20,12 @@ public class Toolbox {
    public static String getString(int i){
        return String.valueOf(i);
    }
+   
+   public static double getDouble(String str){
+        try{
+            return Double.parseDouble(str.trim());
+        }catch(Exception e){
+            return 0;
+        }       
+   }
 }

@@ -97,6 +97,13 @@
     <Cahiers>
         <annee>12</annee>
         <id>0</id>
+        <listPositions>
+            <description>3</description>
+            <numPosition>1</numPosition>
+            <positionR>false</positionR>
+            <unite>4</unite>
+            <variante>2</variante>
+        </listPositions>
         <num>117</num>
         <titre>Démolitions et démontages</titre>
     </Cahiers>

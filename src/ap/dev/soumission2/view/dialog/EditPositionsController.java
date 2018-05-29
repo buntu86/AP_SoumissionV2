@@ -5,12 +5,14 @@ import ap.dev.soumission2.data.CahierToStringConverter;
 import ap.dev.soumission2.model.M_Cahier;
 import ap.dev.soumission2.model.M_Position;
 import ap.dev.soumission2.tools.Log;
+import ap.dev.soumission2.tools.Toolbox;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
@@ -63,6 +65,8 @@ public class EditPositionsController implements Initializable {
     @FXML
     private TextField tf_prix;
     
+    private int index = 0;      
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
     
@@ -86,30 +90,29 @@ public class EditPositionsController implements Initializable {
                 tf_unite.setText(obs.getValue().getUnite());
                 tf_prix.setText(String.valueOf(obs.getValue().getPrixUnitaire()));
                 
-                /*tf
-                
-                tf_num.setText(String.valueOf(obs.getValue().getNum()));
-                tf_annee.setText(String.valueOf(obs.getValue().getAnnee()));
-                tf_titre.setText(obs.getValue().getTitre());
-                index = table.getSelectionModel().selectedIndexProperty().get();*/
+                index = table.getSelectionModel().selectedIndexProperty().get();
             }
             else
             {
-                /*btn_modifier.setDisable(true);
+                btn_modifier.setDisable(true);
                 btn_supprimer.setDisable(true);
                 btn_ajouter.setDisable(false);
                 tf_num.clear();
-                tf_annee.clear();
-                tf_titre.clear();
-                index = 0;*/
+                tf_var.clear();
+                tf_desc.clear();
+                tf_unite.clear();
+                tf_prix.clear();
+                
+                index = 0;
             }
         });        
-       
+        
+        btn_modifier.setDisable(true);
+        btn_supprimer.setDisable(true);
         vbox.setDisable(true);
     }    
     
     public void updateTable(M_Cahier cahier){
-        //cahier.getListPositions().add(new M_Position(0, true, 0, 0, "desc", "unite"));
         MainApp.getCan().save();
 
         table.setItems(cahier.getListPositions());
@@ -120,6 +123,32 @@ public class EditPositionsController implements Initializable {
         prix.setCellValueFactory(cellData -> cellData.getValue().prixUnitaireProperty().asObject());
         vbox.setDisable(false);
     }
+    
+    @FXML
+    public void add(){
+        if(!tf_num.getText().trim().equals("")){
+            choicebox
+                .getSelectionModel()
+                .getSelectedItem()
+                .getListPositions()
+                .add(new M_Position(Toolbox.getInt(tf_num.getText().trim()), false, Toolbox.getInt(tf_var.getText().trim()), Toolbox.getDouble(tf_prix.getText().trim()), tf_desc.getText().trim(), tf_unite.getText().trim()));            
+            MainApp.getCan().save();
+            tf_num.clear();
+            tf_var.clear();
+            tf_desc.clear();
+            tf_unite.clear();
+            tf_prix.clear();
+            table.getSelectionModel().clearSelection();
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erreur - numéro position obligatoire");
+            alert.setHeaderText(null);
+            alert.setContentText("Le numéro de la position est obligatoire.");
+            alert.showAndWait();
+        }
+    }    
     
     public void setStage(Stage editArticlesStage) {
         this.stage = editArticlesStage;
