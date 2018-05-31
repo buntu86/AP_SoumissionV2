@@ -2,9 +2,11 @@ package ap.dev.soumission2.model;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleFloatProperty;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,14 +14,14 @@ import javafx.beans.property.StringProperty;
 
 public class M_Position {
 
-    private final IntegerProperty numPosition = new SimpleIntegerProperty(); 
+    private final FloatProperty numPosition = new SimpleFloatProperty(); 
     private final BooleanProperty positionR = new SimpleBooleanProperty();    
     private final IntegerProperty variante = new SimpleIntegerProperty();    
     private final DoubleProperty prixUnitaire = new SimpleDoubleProperty();
     private final StringProperty description = new SimpleStringProperty();    
     private final StringProperty unite = new SimpleStringProperty();
     
-    public M_Position(int numPosition, boolean positionR, int variante, double prixUnitaire, String description, String unite){
+    public M_Position(float numPosition, boolean positionR, int variante, double prixUnitaire, String description, String unite){
         this.numPosition.set(numPosition);
         this.positionR.set(positionR);
         this.variante.set(variante);
@@ -31,15 +33,15 @@ public class M_Position {
     public M_Position() {
     }
 
-    public int getNumPosition() {
+    public float getNumPosition() {
         return numPosition.get();
     }
 
-    public void setNumPosition(int value) {
+    public void setNumPosition(float value) {
         numPosition.set(value);
     }
 
-    public IntegerProperty numPositionProperty() {
+    public FloatProperty numPositionProperty() {
         return numPosition;
     }
 

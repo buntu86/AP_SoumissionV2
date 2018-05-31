@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.dev.soumission2.view.dialog.EditPositionsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ap.dev.soumission2.view.dialog.EditPositionsController">
    <children>
       <VBox minWidth="700.0" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -23,7 +23,7 @@
             <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
               <columns>
                   <TableColumn fx:id="posr" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" text="PosR" />
-                <TableColumn fx:id="num" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Num" />
+                <TableColumn fx:id="num" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Num" />
                 <TableColumn fx:id="var" maxWidth="35.0" minWidth="35.0" prefWidth="35.0" text="Var." />
                   <TableColumn fx:id="desc" minWidth="75.0" prefWidth="75.0" text="Description" />
                   <TableColumn fx:id="unite" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Unité" />
@@ -82,12 +82,12 @@
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="btn_modifier" maxWidth="70.0" minWidth="70.0" mnemonicParsing="false" prefWidth="70.0" text="Modifier">
+                        <Button fx:id="btn_modifier" maxWidth="70.0" minWidth="70.0" mnemonicParsing="false" onAction="#update" prefWidth="70.0" text="Modifier">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="btn_supprimer" maxWidth="75.0" minWidth="75.0" mnemonicParsing="false" prefWidth="75.0" text="Supprimer" />
+                        <Button fx:id="btn_supprimer" maxWidth="75.0" minWidth="75.0" mnemonicParsing="false" onAction="#delete" prefWidth="75.0" text="Supprimer" />
                      </children>
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" />

@@ -4,38 +4,31 @@
         <annee>15</annee>
         <id>0</id>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Salaires</description>
+            <numPosition>222.001</numPosition>
+            <positionR>false</positionR>
+            <unite>up</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Matériaux</description>
+            <numPosition>233.001</numPosition>
+            <positionR>false</positionR>
+            <unite>up</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Machines</description>
+            <numPosition>244.001</numPosition>
+            <positionR>false</positionR>
+            <unite>up</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
-            <variante>0</variante>
-        </listPositions>
-        <listPositions>
-            <description>desc</description>
-            <numPosition>0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Tiers</description>
+            <numPosition>252.001</numPosition>
+            <positionR>false</positionR>
+            <unite>up</unite>
             <variante>0</variante>
         </listPositions>
         <num>111</num>
@@ -46,14 +39,14 @@
         <id>0</id>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
@@ -66,14 +59,14 @@
         <id>0</id>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
@@ -86,7 +79,7 @@
         <id>0</id>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
@@ -99,7 +92,7 @@
         <id>0</id>
         <listPositions>
             <description>3</description>
-            <numPosition>1</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>false</positionR>
             <unite>4</unite>
             <variante>2</variante>
@@ -154,7 +147,7 @@
         <id>0</id>
         <listPositions>
             <description>desc</description>
-            <numPosition>0</numPosition>
+            <numPosition>0.0</numPosition>
             <positionR>true</positionR>
             <unite>unite</unite>
             <variante>0</variante>
