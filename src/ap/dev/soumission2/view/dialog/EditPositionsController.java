@@ -7,11 +7,11 @@ import ap.dev.soumission2.model.M_Position;
 import ap.dev.soumission2.tools.Log;
 import ap.dev.soumission2.tools.Toolbox;
 import java.net.URL;
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,7 +43,7 @@ public class EditPositionsController implements Initializable {
     @FXML
     private TableColumn<M_Position, String> unite;
     @FXML
-    private TableColumn<M_Position, Double> prix;
+    private TableColumn<M_Position, Float> prix;
     
     @FXML
     private ChoiceBox<M_Cahier> choicebox;
@@ -77,6 +77,7 @@ public class EditPositionsController implements Initializable {
     List<M_Cahier> cahiers = MainApp.getCan().getListCahiers();
     choicebox.getItems().addAll(cahiers);
     choicebox.setConverter( new CahierToStringConverter());
+    addTextLimiter(tf_num, 7);
     
     //Choicebox listener
     choicebox.getSelectionModel()
@@ -94,6 +95,7 @@ public class EditPositionsController implements Initializable {
             btn_modifier.setDisable(false);
             btn_supprimer.setDisable(false);
             btn_ajouter.setDisable(true);
+          
             tf_num.setText(String.valueOf(obs.getValue().getNumPosition()));
             tf_var.setText(String.valueOf(obs.getValue().getVariante()));
             tf_desc.setText(obs.getValue().getDescription());
@@ -128,7 +130,7 @@ public class EditPositionsController implements Initializable {
                 .getSelectionModel()
                 .getSelectedItem()
                 .getListPositions()
-                .add(new M_Position(Toolbox.getFloat(tf_num.getText().trim()), false, Toolbox.getInt(tf_var.getText().trim()), Toolbox.getDouble(tf_prix.getText().trim()), tf_desc.getText().trim(), tf_unite.getText().trim()));            
+                .add(new M_Position(Toolbox.getFloat(tf_num.getText().trim()), false, Toolbox.getInt(tf_var.getText().trim()), Toolbox.getFloat(tf_prix.getText().trim()), tf_desc.getText().trim(), tf_unite.getText().trim()));            
             MainApp.getCan().save();
             resetInterface();
         }
@@ -149,7 +151,7 @@ public class EditPositionsController implements Initializable {
                 .getSelectionModel()
                 .getSelectedItem()
                 .getListPositions()
-                .set(index, new M_Position(Toolbox.getFloat(tf_num.getText().trim()), false, Toolbox.getInt(tf_var.getText().trim()), Toolbox.getDouble(tf_prix.getText().trim()), tf_desc.getText().trim(), tf_unite.getText().trim()));
+                .set(index, new M_Position(Toolbox.getFloat(tf_num.getText().trim()), false, Toolbox.getInt(tf_var.getText().trim()), Toolbox.getFloat(tf_prix.getText().trim()), tf_desc.getText().trim(), tf_unite.getText().trim()));
             MainApp.getCan().save();
             
             resetInterface();
@@ -171,7 +173,7 @@ public class EditPositionsController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmation de suppression de la position");
         alert.setContentText(null);
-        alert.setHeaderText("Etes-vous sûr de vouloir supprimer cette position (" + table.getSelectionModel().getSelectedItem().getNumPosition() + " " + table.getSelectionModel().getSelectedItem().getDescription() + ")?");
+        alert.setHeaderText("Etes-vous sûr de vouloir supprimer cette position \"" + table.getSelectionModel().getSelectedItem().getNumPosition() + " " + table.getSelectionModel().getSelectedItem().getDescription() + "\"?");
         Optional<ButtonType> result = alert.showAndWait();
         
         if(result.get() == ButtonType.OK)
@@ -212,6 +214,7 @@ public class EditPositionsController implements Initializable {
         btn_modifier.setDisable(true);
         btn_supprimer.setDisable(true);
         btn_ajouter.setDisable(false);
+        
         tf_num.clear();
         tf_var.clear();
         tf_desc.clear();
@@ -221,4 +224,15 @@ public class EditPositionsController implements Initializable {
         table.getSelectionModel().clearSelection();        
     }
     
+    private static void addTextLimiter(final TextField tf, final int maxLength) {
+        tf.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(final ObservableValue<? extends String> ov, final String oldValue, final String newValue) {
+                if (tf.getText().length() > maxLength) {
+                    String s = tf.getText().substring(0, maxLength);
+                    tf.setText(s);
+                }
+            }
+        });
+    }    
 }

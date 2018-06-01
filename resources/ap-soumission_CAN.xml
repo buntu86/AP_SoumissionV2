@@ -7,6 +7,7 @@
             <description>Salaires</description>
             <numPosition>222.001</numPosition>
             <positionR>false</positionR>
+            <prixUnitaire>0.9</prixUnitaire>
             <unite>up</unite>
             <variante>0</variante>
         </listPositions>
@@ -14,6 +15,7 @@
             <description>Matériaux</description>
             <numPosition>233.001</numPosition>
             <positionR>false</positionR>
+            <prixUnitaire>0.9</prixUnitaire>
             <unite>up</unite>
             <variante>0</variante>
         </listPositions>
@@ -21,6 +23,7 @@
             <description>Machines</description>
             <numPosition>244.001</numPosition>
             <positionR>false</positionR>
+            <prixUnitaire>0.9</prixUnitaire>
             <unite>up</unite>
             <variante>0</variante>
         </listPositions>
@@ -28,6 +31,7 @@
             <description>Tiers</description>
             <numPosition>252.001</numPosition>
             <positionR>false</positionR>
+            <prixUnitaire>1.0</prixUnitaire>
             <unite>up</unite>
             <variante>0</variante>
         </listPositions>
@@ -37,20 +41,6 @@
     <Cahiers>
         <annee>0</annee>
         <id>0</id>
-        <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
-            <variante>0</variante>
-        </listPositions>
-        <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
-            <variante>0</variante>
-        </listPositions>
         <num>112</num>
         <titre>Essais</titre>
     </Cahiers>
@@ -58,17 +48,35 @@
         <annee>14</annee>
         <id>0</id>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Installation complète</description>
+            <numPosition>111.002</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>gl</unite>
             <variante>0</variante>
         </listPositions>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Signalisations, barrières</description>
+            <numPosition>231.001</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>gl</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Clôtures HERAS</description>
+            <numPosition>242.314</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Gigan</description>
+            <numPosition>242.341</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m</unite>
             <variante>0</variante>
         </listPositions>
         <num>113</num>
@@ -78,10 +86,123 @@
         <annee>11</annee>
         <id>0</id>
         <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
+            <description>Abattage d'arbres d. &lt;160mm</description>
+            <numPosition>211.201</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>p</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Essouchement d.&lt;160mm</description>
+            <numPosition>521.191</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>p</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Essouchement d.&gt;300mm</description>
+            <numPosition>523.141</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>p</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Décapage TV &lt;0.20m</description>
+            <numPosition>212.111</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Nettoyage places de dépots</description>
+            <numPosition>217.001</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m2</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Excavation &lt;1.00m</description>
+            <numPosition>311.104</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Excavation isolée (semelles, fosse,...) &lt;1.00m</description>
+            <numPosition>315.114</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Déblai à la main</description>
+            <numPosition>331.101</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Blocs isolés &gt; 0.25m3</description>
+            <numPosition>351.312</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Entraves par conduites de distribution</description>
+            <numPosition>351.403</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Compactage f. de fouille, yc réglage +/- 2cm</description>
+            <numPosition>381.204</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m2</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>F. grave 0/45</description>
+            <numPosition>521.116</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>F+P SG5000</description>
+            <numPosition>661.001</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m2</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>F+P Bidim</description>
+            <numPosition>664.001</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m2</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Remblais grave 0/45 yc compact. 20cm</description>
+            <numPosition>681.113</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>m3</unite>
             <variante>0</variante>
         </listPositions>
         <num>116</num>
@@ -90,13 +211,6 @@
     <Cahiers>
         <annee>12</annee>
         <id>0</id>
-        <listPositions>
-            <description>3</description>
-            <numPosition>0.0</numPosition>
-            <positionR>false</positionR>
-            <unite>4</unite>
-            <variante>2</variante>
-        </listPositions>
         <num>117</num>
         <titre>Démolitions et démontages</titre>
     </Cahiers>
@@ -127,6 +241,22 @@
     <Cahiers>
         <annee>10</annee>
         <id>0</id>
+        <listPositions>
+            <description>Installation</description>
+            <numPosition>111.002</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>gl</unite>
+            <variante>0</variante>
+        </listPositions>
+        <listPositions>
+            <description>Installation petite fraiseuse</description>
+            <numPosition>121.102</numPosition>
+            <positionR>false</positionR>
+            <prixUnitaire>0.0</prixUnitaire>
+            <unite>gl</unite>
+            <variante>0</variante>
+        </listPositions>
         <num>223</num>
         <titre>Chaussées et revêtements</titre>
     </Cahiers>
@@ -145,13 +275,6 @@
     <Cahiers>
         <annee>13</annee>
         <id>0</id>
-        <listPositions>
-            <description>desc</description>
-            <numPosition>0.0</numPosition>
-            <positionR>true</positionR>
-            <unite>unite</unite>
-            <variante>0</variante>
-        </listPositions>
         <num>314</num>
         <titre>Maçonnerie</titre>
     </Cahiers>

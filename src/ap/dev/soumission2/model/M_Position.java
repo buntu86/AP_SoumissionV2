@@ -1,11 +1,9 @@
 package ap.dev.soumission2.model;
 
 import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleFloatProperty;
 
 import javafx.beans.property.SimpleIntegerProperty;
@@ -17,11 +15,11 @@ public class M_Position {
     private final FloatProperty numPosition = new SimpleFloatProperty(); 
     private final BooleanProperty positionR = new SimpleBooleanProperty();    
     private final IntegerProperty variante = new SimpleIntegerProperty();    
-    private final DoubleProperty prixUnitaire = new SimpleDoubleProperty();
+    private final FloatProperty prixUnitaire = new SimpleFloatProperty();
     private final StringProperty description = new SimpleStringProperty();    
     private final StringProperty unite = new SimpleStringProperty();
     
-    public M_Position(float numPosition, boolean positionR, int variante, double prixUnitaire, String description, String unite){
+    public M_Position(float numPosition, boolean positionR, int variante, float prixUnitaire, String description, String unite){
         this.numPosition.set(numPosition);
         this.positionR.set(positionR);
         this.variante.set(variante);
@@ -44,7 +42,6 @@ public class M_Position {
     public FloatProperty numPositionProperty() {
         return numPosition;
     }
-
 
     public boolean isPositionR() {
         return positionR.get();
@@ -96,7 +93,7 @@ public class M_Position {
         return unite;
     }
 
-    public double getPrixUnitaire() {
+    public float getPrixUnitaire() {
         return prixUnitaire.get();
     }
 
@@ -104,7 +101,7 @@ public class M_Position {
         prixUnitaire.set(value);
     }
 
-    public DoubleProperty prixUnitaireProperty() {
+    public FloatProperty prixUnitaireProperty() {
         return prixUnitaire;
     }   
 
