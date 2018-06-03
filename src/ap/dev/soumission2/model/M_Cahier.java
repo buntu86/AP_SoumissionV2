@@ -27,7 +27,6 @@ public class M_Cahier {
     
     @Override
     public String toString() {
-        //return "\n* " + getNum() + " - " + getTitre() + " (v" + getAnnee() + ") => " + getListPositions();
         return getNum() + " - " + getTitre() + " (v" + getAnnee() + ")";
     }
     
@@ -79,7 +78,6 @@ public class M_Cahier {
         return titre;
     }
     
-    //@XmlElement(name = "Position")
     public ObservableList<M_Position> getListPositions(){
         return this.listPositions;
     }

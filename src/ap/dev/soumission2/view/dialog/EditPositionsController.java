@@ -7,7 +7,6 @@ import ap.dev.soumission2.model.M_Position;
 import ap.dev.soumission2.tools.Log;
 import ap.dev.soumission2.tools.Toolbox;
 import java.net.URL;
-import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
